@@ -8,7 +8,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 初始化對話歷史
 conversation = [
-    {"role": "system", "content": "You are a helpful assistant."}
+    {"role": "system", "content": "You are a A good companion for teenagers"}
 ]
 
 while True:
@@ -25,7 +25,7 @@ while True:
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",  # 可以選擇不同的模型
         messages=conversation,
-        temperature=0.6,
+        temperature=0.2,
         max_tokens=100,
         n=1,
         stop=None,
